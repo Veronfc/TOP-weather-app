@@ -1,0 +1,58 @@
+header {
+  display: flex; flex-wrap: wrap;
+  justify-content: space-between; align-items: center;
+  width: 100vw;
+  color: #EEEEEE;
+
+  &::before {
+    content: 'THE WEATHERMAN';
+    text-align: center;
+    margin: 20px 30px 20px 30px;
+    font: 3rem/3rem 'Trusto', sans-serif;
+    letter-spacing: .5rem;
+  } 
+
+  .city-container {
+    display: flex; 
+    align-items: center;
+    margin: 0 30px;
+
+    input {
+      width: 250px;
+      color: #EEEEEE; background-color: #303841;
+      padding: 7.5px 10px 5px 10px;
+      border: 0; border-radius: 5px 0 0 5px;
+      font: 1rem/1rem 'GeosansLight', sans-serif;
+      text-transform: uppercase;
+      transition: .5s;
+      outline: 0;
+    }
+
+    button {
+      display: flex;
+      justify-content: center; align-items: center;
+      color: #EEEEEE; background-color: #303841;
+      padding: 3px 10px;
+      border: 0; border-radius: 0 5px 5px 0;
+      font: 1rem/1rem 'GeosansLight', sans-serif;
+      transition: .5s;
+      cursor: pointer;
+  
+      &:hover {
+        color: black; background-color: #17c3b2;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 880px) {
+  header {
+    justify-content: center;
+    gap: 10px;
+    margin: 0 0 20px 0;
+  }
+
+  .city-container {
+    margin: 0 30px;
+  }
+}

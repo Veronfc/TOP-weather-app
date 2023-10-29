@@ -1,0 +1,205 @@
+@import url("https://fonts.cdnfonts.com/css/trusto");
+@import url("https://fonts.cdnfonts.com/css/geosanslight");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  color: #EEEEEE;
+}
+header::before {
+  content: "THE WEATHERMAN";
+  text-align: center;
+  margin: 20px 30px 20px 30px;
+  font: 3rem/3rem "Trusto", sans-serif;
+  letter-spacing: 0.5rem;
+}
+header .city-container {
+  display: flex;
+  align-items: center;
+  margin: 0 30px;
+}
+header .city-container input {
+  width: 250px;
+  color: #EEEEEE;
+  background-color: #303841;
+  padding: 7.5px 10px 5px 10px;
+  border: 0;
+  border-radius: 5px 0 0 5px;
+  font: 1rem/1rem "GeosansLight", sans-serif;
+  text-transform: uppercase;
+  transition: 0.5s;
+  outline: 0;
+}
+header .city-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #EEEEEE;
+  background-color: #303841;
+  padding: 3px 10px;
+  border: 0;
+  border-radius: 0 5px 5px 0;
+  font: 1rem/1rem "GeosansLight", sans-serif;
+  transition: 0.5s;
+  cursor: pointer;
+}
+header .city-container button:hover {
+  color: black;
+  background-color: #17c3b2;
+}
+
+@media screen and (max-width: 880px) {
+  header {
+    justify-content: center;
+    gap: 10px;
+    margin: 0 0 20px 0;
+  }
+  .city-container {
+    margin: 0 30px;
+  }
+}
+main {
+  display: grid;
+  grid-template: 1fr 200px/1fr;
+  gap: 7.5px;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  margin: 20px;
+  color: white;
+  font: 1rem/1rem "GeosansLight", sans-serif;
+}
+main .days {
+  grid-area: 1/1/2/2;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: start;
+  gap: 7.5px;
+  overflow: scroll hidden;
+  scroll-snap-type: x mandatory;
+}
+main .days .day {
+  min-height: 250px;
+  padding: 15px;
+  background-color: #303841;
+  border-radius: 10px;
+  scroll-snap-align: start;
+  display: grid;
+  grid-template: 1fr 2fr 1fr 1fr 2fr/repeat(4, 1fr);
+  grid-template-areas: "d-day d-day d-date d-date" "d-icon d-icon d-temp d-temp" "d-icon d-icon d-min d-max" "d-icon d-icon d-humidity d-rain" "d-wind d-condition d-condition d-condition";
+}
+main .hours {
+  grid-area: 2/1/3/2;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: start;
+  gap: 7.5px;
+  overflow: scroll hidden;
+  scroll-snap-type: x mandatory;
+}
+main .hours .hour {
+  min-height: 175px;
+  padding: 10px;
+  background-color: #303841;
+  border-radius: 10px;
+  display: grid;
+  grid-template: repeat(4, 1fr)/repeat(2, 1fr);
+  grid-template-areas: "h-icon h-time" "h-icon t-temp" "h-icon h-humidity" "h-wind h-rain";
+}
+main .hours .hour:first-child {
+  scroll-snap-align: start;
+}
+
+@media screen and (max-width: 700px) {
+  .hour {
+    min-width: calc((100% - 47.5px) / 2);
+  }
+  .hour:nth-child(2n+1) {
+    scroll-snap-align: start;
+  }
+  .day {
+    min-width: calc(100% - 30px);
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 1150px) {
+  .hour {
+    min-width: calc((100% - 75px) / 3);
+  }
+  .hour:nth-child(3n+1) {
+    scroll-snap-align: start;
+  }
+  .day {
+    min-width: calc((100% - 67.5px) / 2);
+  }
+}
+@media screen and (min-width: 1150px) and (max-width: 1600px) {
+  .hour {
+    min-width: calc((100% - 102.5px) / 4);
+  }
+  .hour:nth-child(5n+0) {
+    scroll-snap-align: start;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .day {
+    min-width: calc((100% - 105px) / 3);
+  }
+}
+@media screen and (min-width: 1600px) and (max-width: 2050px) {
+  .hour {
+    min-width: calc((100% - 157.5px) / 6);
+  }
+  .hour:nth-child(7n+0) {
+    scroll-snap-align: start;
+  }
+}
+@media screen and (min-width: 2050px) {
+  .hour {
+    min-width: calc((100% - 212.5px) / 8);
+  }
+  .hour:nth-child(9n+0) {
+    scroll-snap-align: start;
+  }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: 10px 0;
+  color: #EEEEEE;
+  background-color: #303841;
+  font: 1rem/1rem "GeosansLight", sans-serif;
+}
+footer a {
+  color: #EEEEEE;
+  margin: 0 0 0 5px;
+}
+footer a:hover {
+  color: #17c3b2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  background-color: #3A4750;
+}
+
+/*# sourceMappingURL=styles.css.map */

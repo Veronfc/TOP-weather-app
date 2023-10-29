@@ -1,0 +1,17 @@
+footer {
+  display: flex;
+  justify-content: center; align-items: center;
+  width: 100vw;
+  padding: 10px 0;
+  color: #EEEEEE; background-color: #303841;
+  font: 1rem/1rem 'GeosansLight', sans-serif;
+
+  a {
+    color: #EEEEEE;
+    margin: 0 0 0 5px;
+
+    &:hover {
+      color: #17c3b2;
+    }
+  }
+}
