@@ -23,7 +23,7 @@ function Header({ city, change }) {
 					search
 				</button>
 				<button
-					className={buttonClass + ' material-symbols-outlined rounded-r-md'}
+					className={'bg-white px-2 text-xl text-c2 duration-200 hover:bg-c2 hover:text-c3 material-symbols-outlined rounded-r-md'}
 					title='Save city as default'
 					onClick={() => {
 						localStorage.setItem('default_city', city)
