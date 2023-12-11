@@ -1,16 +1,21 @@
-import { Header } from './Header'
-import { Footer } from './Footer'
 import { useState } from 'react'
+import { Header } from './Header'
+import { Main } from './Main'
+import { Footer } from './Footer'
 
 function App() {
-  const mainClass = 'w-screen h-[calc(100vh-7rem)] bg-[#DDDDDD]'
+  const defaultCity = localStorage.getItem('default_city')
+
+  const [city, setCity] = useState(defaultCity)
+
+  const change = (e) => {
+    setCity(e.target.value)
+  }
 
   return (
     <>
-      <Header />
-      <main className={mainClass}>
-
-      </main>
+      <Header city={city} change={change} />
+      <Main />
       <Footer />
     </>
   )

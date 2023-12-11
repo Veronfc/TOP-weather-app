@@ -1,9 +1,10 @@
 function Footer() {
-  const footerClass = 'w-screen h-8 flex justify-center items-center bg-[#3A4750] text-[#EEEEEE] font-gsl'
-  const linkClass = 'ml-[.2rem] hover:underline hover:text-[#D72323]'
+  const footerClass = 'fixed bottom-0 w-screen h-8 flex justify-center items-center bg-c2 text-c1 font-gsl'
+  const linkClass = 'ml-[.2rem] hover:underline hover:text-c3'
 
   return (
-    <footer className={footerClass}>
+    <footer
+      className={footerClass}>
       Website developed by
       <a
         className={linkClass}
