@@ -19,4 +19,19 @@ async function getWeather(city, unit) {
 	return weather
 }
 
-export { getWeather }
+function currentDate() {
+	const locale =
+		navigator.languages && navigator.languages.length
+			? navigator.languages[0]
+			: navigator.language
+
+	const now = new Date()
+	let weekday = now.toLocaleDateString(locale, { weekday: 'long' })
+	let day = now.getDate()
+	let month = now.toLocaleDateString(locale, { month: 'short' })
+	let year = now.getFullYear()
+
+	return { weekday: weekday, date: `${day} ${month} ${year}` }
+}
+
+export { getWeather, currentDate }

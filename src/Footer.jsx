@@ -1,15 +1,11 @@
 /** @format */
 
 function Footer() {
-	const footerClass =
-		'fixed bottom-0 w-screen h-8 flex justify-center items-center bg-c2 text-c1 font-gsl'
-	const linkClass = 'ml-[.2rem] hover:underline hover:text-c3'
-
 	return (
-		<footer className={footerClass}>
+		<footer className='fixed bottom-0 flex h-8 w-screen items-center justify-center bg-c2 font-gsl text-c1'>
 			Website developed by
 			<a
-				className={linkClass}
+				className='ml-[.2rem] hover:text-c3 hover:underline'
 				href='https://github.com/Veronfc'
 				target='_blank'>
 				Veronfc
