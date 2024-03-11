@@ -1,0 +1,6 @@
+.prettierrc
+.vscode
+index.html
+*.json
+*.md
+*.config.js

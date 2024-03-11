@@ -1,0 +1,16 @@
+{
+  "tabWidth": 2,
+  "useTabs": true,
+  "semi": false,
+  "singleQuote": true,
+  "quoteProps": "consistent",
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "arrowParens": "avoid",
+  "insertPragma": true,
+  "vueIndentScriptAndStyle": true,
+  "embeddedLanguageFormatting": "auto",
+  "singleAttributePerLine": true,
+  "plugins": ["prettier-plugin-tailwindcss", "prettier-plugin-organize-attributes"]
+}

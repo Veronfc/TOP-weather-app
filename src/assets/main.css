@@ -1,0 +1,15 @@
+/** @format */
+@import url('https://fonts.googleapis.com/css2?family=Finlandica&family=Righteous');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply h-dvh overflow-hidden bg-secondary;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
